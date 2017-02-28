@@ -65,8 +65,6 @@ Log.i("test", "---------隐藏-----------"
  }
  }, 10);
 
-
-
  2016.5.30
 
  Android与H5交互,相应H5页面
@@ -99,8 +97,6 @@ Log.i("test", "---------隐藏-----------"
  }
  });
 
-
-
  测量listview高度
 
  @Override protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
@@ -115,19 +111,13 @@ Log.i("test", "---------隐藏-----------"
  }
 
 
-
-
  2016/11/14
  Android     Studio  配置 butterknife插件
-
  app      gradle  配置apply plugin: 'android-apt'
  compile 'com.jakewharton:butterknife:8.4.0'
  apt 'com.jakewharton:butterknife-compiler:8.4.0'
  project gradle   classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
-
-
  Material Design Library 添加依赖
-
  compile 'com.android.support:design:24.0.0'
 
  2016/11/16
@@ -159,7 +149,6 @@ Log.i("test", "---------隐藏-----------"
 
 
  2017/2/6
-
  Android 数据结构
 
  队列（Queue）
@@ -173,29 +162,31 @@ Log.i("test", "---------隐藏-----------"
  链条（Linked List）
  散列表（Hash）
 
-
-
  2017/2/7
-
  Android 内存泄漏总结
 
-
-
  2017/2/8
-
  Android Gradle
  最高优先级：buildType 的设置
  次高优先级：productFlavor 的设置
  中等优先级：在 src/main 目录下的 Manifest 文件
  最低优先级：各种依赖和第三方库的设置
 
+ 2017/2/20
+ 问题:轮播图与自定义下拉控件冲突
+ 问题原因：下拉刷新控件在dispatchTouchEvent做事件处理导致与轮播图事件相互争抢
+ 导致下拉或者滑动轮播图的时候事件相互争抢出现滑动不流畅
+ 解决方法:在dispatchTouchEvent  的 ACTION_MOVE 在判断滑动的方向 true执行下拉刷新
+ false执行轮播图操作
 
- 2017/2/28
+ 2017/2/21
+ 问题:提取JS收益计算公式计算数值出误差
+ 问题原因:计算的时候JS中的弱类型double 移植直到Android中整形没有转换成double
+ 解决方法：整形+d(100d)
+
+
+ 2017/2/26
  问题:
 
-
-
  **/
-
-
 }
