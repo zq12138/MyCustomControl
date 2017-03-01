@@ -29,6 +29,7 @@ public class ArcProgressBar extends View {
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
         mPaint.setColor(Color.RED);
+
     }
 
 
@@ -65,6 +66,7 @@ public class ArcProgressBar extends View {
         setMeasuredDimension(MeasureSpec.getSize(widthMeasureSpec), MeasureSpec.getSize(heightMeasureSpec) / 2);
     }
 
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -79,6 +81,8 @@ public class ArcProgressBar extends View {
         canvas.drawArc(mRectF, 180, mProgress, false, mPaint);
         mPaint.setStrokeWidth(8);
         mPaint.setStyle(Paint.Style.FILL);
-        canvas.drawText("水水水水", centre - mPaint.measureText("水水水水") / 2, radius - 30, mPaint);
+        canvas.drawText("水水" + mProgress + "%水水", centre - mPaint.measureText("水水" + mProgress + "%水水") / 2, radius - 30, mPaint);
+
+
     }
 }
