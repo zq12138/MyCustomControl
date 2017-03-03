@@ -31,7 +31,6 @@ public class ArcProgressBarActivity extends AppCompatActivity {
     ArcProgressBar mArcProgressBar;
     @BindView(R.id.button2)
     Button button2;
-
     List<String> lists;
 
     @Override

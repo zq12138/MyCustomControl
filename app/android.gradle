@@ -1,0 +1,76 @@
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+
+    signingConfigs {
+        config {
+            storeFile file('ccl.jks')
+            keyAlias 'ccl.jks'
+            keyPassword '111111'
+            storePassword '111111'
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.example.admin.mycustomcontrol"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [app_icon: "@mipmap/ic_launcher", app_name: "@string/app_name"]
+    }
+
+
+    flavorDimensions 'environment', 'channel'
+    productFlavors {
+        xsh01 {
+            dimension "channel"
+            manifestPlaceholders = [FRIEND_ID_VALUE: "ID", SHUZILM: "市场名称"]
+        }
+        xsh01_vest {
+            dimension "channel"
+            manifestPlaceholders = [FRIEND_ID_VALUE: "ID", SHUZILM: "市场名称", app_icon: "vest图标", app_name: "vest名称"]
+            applicationId "com.example.admin.mycustomcontrol.vest"
+        }
+
+        //正式环境
+        formal {
+            dimension "environment"
+            manifestPlaceholders = [激光推送: "APPKey"]
+            buildConfigField 'String', 'AUTO_BIDDING_RULES', '"http://正式环境"'
+        }
+        formal_vest {
+            dimension "environment"
+            manifestPlaceholders = [激光推送: "马甲APPKey"]
+            buildConfigField 'String', 'AUTO_BIDDING_RULES', '"http://正式环境"'
+        }
+        //测试
+        date {
+            dimension "environment"
+            manifestPlaceholders = [激光推送: "APPKey"]
+            buildConfigField 'String', 'AUTO_BIDDING_RULES', '"http://测试环境"'
+        }
+        date_vest {
+            dimension "environment"
+            manifestPlaceholders = [激光推送: "马甲APPKey"]
+            buildConfigField 'String', 'AUTO_BIDDING_RULES', '"http://测试环境"'
+        }
+    }
+
+
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config;
+        }
+
+        debug {
+            signingConfig signingConfigs.config;
+        }
+    }
+}
