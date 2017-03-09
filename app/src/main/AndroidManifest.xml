@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.admin.mycustomcontrol">
+    package="com.example.admin.mycustomcontrol.activity">
 
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -23,14 +23,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.ArcProgressBarActivity"></activity>
+        <activity android:name=".ArcProgressBarActivity"></activity>
 
 
         <activity
             android:name="com.sumavision.sdk.SumavisionWebview"
             android:screenOrientation="portrait"></activity>
 
-        <activity android:name=".activity.WedViewActivity"></activity>
+        <activity android:name=".WedViewActivity"></activity>
+
+        <activity android:name=".OkHttpActivity"></activity>
     </application>
 
     <uses-feature

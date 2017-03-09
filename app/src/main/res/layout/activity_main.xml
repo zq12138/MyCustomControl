@@ -7,7 +7,7 @@
 
 
     <Button
-        android:id="@+id/btn_arcProgressBar"
+        android:id="@+id/btn_arcProgress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -19,12 +19,12 @@
         android:text="弧形进度条" />
 
     <Button
-        android:id="@+id/btn_banner"
+        android:id="@+id/btn_recycler"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btn_arcProgressBar"
-        android:layout_alignStart="@+id/btn_arcProgressBar"
-        android:layout_below="@+id/btn_arcProgressBar"
+        android:layout_alignLeft="@+id/btn_arcProgress"
+        android:layout_alignStart="@+id/btn_arcProgress"
+        android:layout_below="@+id/btn_arcProgress"
         android:layout_marginTop="23dp"
         android:text="轮播图" />
 
@@ -32,11 +32,20 @@
         android:id="@+id/btn_wed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/btn_banner"
-        android:layout_alignRight="@+id/btn_banner"
-        android:layout_below="@+id/btn_banner"
+        android:layout_alignEnd="@+id/btn_recycler"
+        android:layout_alignRight="@+id/btn_recycler"
+        android:layout_below="@+id/btn_recycler"
         android:layout_marginTop="33dp"
         android:text="WedView" />
+
+    <Button
+        android:id="@+id/btn_okhttp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_wed"
+        android:layout_alignStart="@+id/btn_wed"
+        android:layout_centerVertical="true"
+        android:text="okhttp" />
 
 
 </RelativeLayout>

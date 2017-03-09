@@ -48,6 +48,7 @@ public class ArcProgressBar extends View {
                     mHandler.removeCallbacksAndMessages(null);
                     mHandler.postDelayed(this, 30);
                 }
+
             }
         }, 30);
     }

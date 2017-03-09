@@ -4,6 +4,8 @@ import java.security.MessageDigest;
 
 /**
  * Created by zq on 2017/3/1.
+ * 
+ * Gradle  project sync  in  progress
  */
 
 public class HmacMd5 {

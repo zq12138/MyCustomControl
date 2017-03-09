@@ -2,11 +2,9 @@ package com.example.admin.mycustomcontrol.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.example.admin.mycustomcontrol.R;
 import com.example.admin.mycustomcontrol.utils.ImageWapper;
 import com.example.admin.mycustomcontrol.widget.ArcProgressBar;
 import com.example.admin.mycustomcontrol.widget.Banner;
@@ -22,7 +20,7 @@ import butterknife.OnClick;
  * Created by zq on 2017/3/1.
  */
 
-public class ArcProgressBarActivity extends AppCompatActivity {
+public class ArcProgressBarActivity extends BaseActivity {
 
 
     @BindView(R.id.banner)

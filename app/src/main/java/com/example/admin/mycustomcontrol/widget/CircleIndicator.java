@@ -225,6 +225,7 @@ public class CircleIndicator extends LinearLayout implements
 
     }
 
+
     private void createIndicators(ViewPager viewPager) {
         removeAllViews();
         if (viewPager.getAdapter() == null) {
@@ -266,6 +267,7 @@ public class CircleIndicator extends LinearLayout implements
 
     /**
      * 正在展示的位置
+     * ViewGroup水平垂直滚动实现
      *
      * @return size之内的位置
      */

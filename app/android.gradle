@@ -5,7 +5,7 @@ android {
     signingConfigs {
         config {
             storeFile file('ccl.jks')
-            keyAlias 'ccl.jks'
+            keyAlias '自定义控件'
             keyPassword '111111'
             storePassword '111111'
         }
@@ -57,20 +57,16 @@ android {
             buildConfigField 'String', 'AUTO_BIDDING_RULES', '"http://测试环境"'
         }
     }
-
-
-
     buildTypes {
         release {
             minifyEnabled true
             zipAlignEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config;
+            signingConfig signingConfigs.config
         }
-
         debug {
-            signingConfig signingConfigs.config;
+            signingConfig signingConfigs.config
         }
     }
 }

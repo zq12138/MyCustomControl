@@ -5,7 +5,7 @@ import android.util.DisplayMetrics;
 
 public class DensityUtil {
 	 /**
-     * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
+     * 根据手机的分辨率从 dp 的单位 转成为 px(像素)194373
      */
     public static int dip2px(Context context, float dpValue)
     {
