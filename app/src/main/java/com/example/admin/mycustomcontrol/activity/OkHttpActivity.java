@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+import com.example.admin.mycustomcontrol.retrofit.ActivityRequest;
+import com.example.admin.mycustomcontrol.retrofit.ServiceApi;
+import com.example.admin.mycustomcontrol.retrofit.bean.BaseBean;
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -31,7 +34,29 @@ public class OkHttpActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_okhttp);
+
+        new requestInfo(this).send();
     }
+
+
+    static class requestInfo extends ActivityRequest<BaseBean, OkHttpActivity> {
+
+        public requestInfo(OkHttpActivity attachTarget) {
+            super(attachTarget);
+        }
+
+
+        @Override
+        protected void onResponseSuccess(BaseBean baseBean) {
+
+        }
+
+        @Override
+        protected retrofit2.Call<BaseBean> newCall(ServiceApi api) {
+            return api.requestAutoBidSwitch("", "", "", "");
+        }
+    }
+
 
     /**
      * GET请求
@@ -90,6 +115,7 @@ public class OkHttpActivity extends BaseActivity {
             @Override
             public void onFailure(Call call, IOException e) {
             }
+
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 if (!response.isSuccessful())

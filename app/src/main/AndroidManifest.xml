@@ -33,6 +33,7 @@
         <activity android:name=".WedViewActivity"></activity>
 
         <activity android:name=".OkHttpActivity"></activity>
+        <activity android:name=".AnimationActivity"></activity>
     </application>
 
     <uses-feature

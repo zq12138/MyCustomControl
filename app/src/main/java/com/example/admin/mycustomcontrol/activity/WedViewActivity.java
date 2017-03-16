@@ -8,9 +8,6 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
-import com.example.admin.mycustomcontrol.R;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -48,7 +45,6 @@ public class WedViewActivity extends BaseActivity {
             @Override
             public void onReceivedSslError(WebView view,
                                            SslErrorHandler handler, SslError error) {
-                // TODO Auto-generated method stub
                 // handler.cancel();// Android默认的处理方式environment
                 handler.proceed();// 接受所有网站的证书
                 // handleMessage(Message msg);// 进行其他处理
@@ -56,8 +52,6 @@ public class WedViewActivity extends BaseActivity {
         });
         mWebView.loadUrl("https://onlineuat.cupdata.com:50005/dbesbsit/app/pinsettingSignN.html");
 //        mWebView.loadUrl("https://onlineuat.cupdata.com:50005/dbesbsit/app/bidApply.html?url_seri_no=170302100954911866");
-
-
     }
 }
 

@@ -31,6 +31,8 @@ public class ArcProgressBarActivity extends BaseActivity {
     Button button2;
     List<String> lists;
 
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

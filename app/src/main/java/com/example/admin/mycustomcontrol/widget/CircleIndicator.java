@@ -16,7 +16,7 @@ import android.view.View;
 import android.view.animation.Interpolator;
 import android.widget.LinearLayout;
 
-import com.example.admin.mycustomcontrol.R;
+import com.example.admin.mycustomcontrol.activity.R;
 
 import static android.support.v4.view.ViewPager.OnPageChangeListener;
 

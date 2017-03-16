@@ -1,5 +1,6 @@
 package com.example.admin.mycustomcontrol.activity;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -17,7 +18,12 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.example.admin.mycustomcontrol.retrofit.ActivitySet;
 import com.example.admin.mycustomcontrol.utils.SystemBarTintManager;
+
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.ButterKnife;
 
@@ -27,6 +33,7 @@ import butterknife.ButterKnife;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
+    private boolean isAlive = false;
 
     public <T extends View> T findView(int id) {
         return (T) findViewById(id);
@@ -36,7 +43,34 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initSystemBarTint();
+        isAlive = true;
+        ActivitySet.getInstance().add(this);
+    }
 
+    List<WeakReference<Dialog>> dialogManager = new ArrayList<>();
+
+    public Dialog createDialog(int themeResId) {
+        Dialog dialog = new Dialog(this, themeResId);
+        dialogManager.add(new WeakReference<>(dialog));
+        return dialog;
+    }
+
+
+    @Override
+    protected void onDestroy() {
+
+        isAlive = false;
+        //清理dialog
+        ActivitySet.getInstance().remove(this);
+        for(WeakReference<Dialog> weakReference: dialogManager){
+            if(weakReference.get()!=null){
+                weakReference.get().dismiss();
+            }
+        }
+        dialogManager.clear();
+        dialogManager = null;
+
+        super.onDestroy();
     }
 
     protected void startActivity(Class cla) {
@@ -162,4 +196,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
+    public boolean isAlive() {
+        return isAlive;
+    }
 }

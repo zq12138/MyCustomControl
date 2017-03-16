@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.RelativeLayout;
 
-import com.example.admin.mycustomcontrol.R;
+import com.example.admin.mycustomcontrol.activity.R;
 import com.example.admin.mycustomcontrol.utils.DensityUtil;
 
 import java.util.ArrayList;

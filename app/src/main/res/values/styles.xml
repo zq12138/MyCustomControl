@@ -12,4 +12,9 @@
 
     <!--用于控制toolbar溢出菜单的样式-->
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="customDialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@drawable/shape_gray_translucent_rectangle_corners</item>
+    </style>
 </resources>

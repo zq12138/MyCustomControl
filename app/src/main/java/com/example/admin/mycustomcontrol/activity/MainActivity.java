@@ -32,7 +32,7 @@ public class MainActivity extends BaseActivity {
                 startActivity(ArcProgressBarActivity.class);
                 break;
             case R.id.btn_recycler:
-                startActivity(ArcProgressBarActivity.class);
+                startActivity(AnimationActivity.class);
                 break;
             case R.id.btn_wed:
                 startActivity(WedViewActivity.class);
