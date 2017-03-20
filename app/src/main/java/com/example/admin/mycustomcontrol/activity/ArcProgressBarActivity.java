@@ -18,6 +18,21 @@ import butterknife.OnClick;
 
 /**
  * Created by zq on 2017/3/1.InvestProjectFragment
+ *  @Override
+protected void onCreate(@Nullable Bundle savedInstanceState) {
+super.onCreate(savedInstanceState);
+setContentView(R.layout.activity_arc_progressbar);
+ButterKnife.bind(this);
+lists = new ArrayList<>();
+lists.add("http://upload-images.jianshu.io/upload_images/1252638-3f820ebf10110ddc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240");
+banner.setUris(lists, new Banner.DiaplayImageCallback() {
+@Override
+public void displayImage(String url, ImageView view) {
+ImageWapper.with(ArcProgressBarActivity.this).load(url).into(view);
+}
+});
+}
+ *
  */
 
 public class ArcProgressBarActivity extends BaseActivity {
