@@ -11,7 +11,7 @@ import com.example.admin.mycustomcontrol.retrofit.bean.BaseBean;
 import java.lang.ref.WeakReference;
 
 /**
- * Created by zq on 2017/3/16.
+ * Created by zq on 2017/3/16.Redis
  */
 
 public abstract class DialogRequest<E extends BaseBean, T> extends Request<E> {

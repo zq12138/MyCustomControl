@@ -18,7 +18,7 @@ public abstract class Request<E extends BaseBean> {
     }
 
     private ServiceApi getApi() {
-        return ServiceCreater.createrApi();
+        return ServiceCreater.getServiceApiInstance();
     }
 
 

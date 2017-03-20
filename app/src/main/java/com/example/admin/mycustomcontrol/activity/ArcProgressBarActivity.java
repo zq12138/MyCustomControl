@@ -17,7 +17,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * Created by zq on 2017/3/1.
+ * Created by zq on 2017/3/1.InvestProjectFragment
  */
 
 public class ArcProgressBarActivity extends BaseActivity {
@@ -30,9 +30,6 @@ public class ArcProgressBarActivity extends BaseActivity {
     @BindView(R.id.button2)
     Button button2;
     List<String> lists;
-
-
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
