@@ -10,6 +10,7 @@ import butterknife.OnClick;
 
 /**
  * test
+ * test
  */
 public class MainActivity extends BaseActivity {
     @BindView(R.id.btn_arcProgress)
