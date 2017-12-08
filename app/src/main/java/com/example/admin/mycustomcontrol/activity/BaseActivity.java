@@ -29,6 +29,8 @@ import butterknife.ButterKnife;
 
 /**
  * Created by zq on 2017/3/6.
+
+ *
  */
 
 public abstract class BaseActivity extends AppCompatActivity {

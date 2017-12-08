@@ -8,6 +8,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * test
+ */
 public class MainActivity extends BaseActivity {
     @BindView(R.id.btn_arcProgress)
     Button btnArcProgress;

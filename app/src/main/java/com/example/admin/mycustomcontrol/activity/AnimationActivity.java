@@ -12,6 +12,7 @@ import butterknife.ButterKnife;
 /**
  * Created by zq on 2017/3/10.
  * BindBankActivity
+ *
  * if (msg.what == Constants.ARESDETAILS) {// 获取全国各省及其城市数据
    AreasDetailsBody areaData = (AreasDetailsBody) command.resData;
   if (areaData.getSuccess().equals("true")) {
